@@ -4,7 +4,7 @@ type UserFull struct {
 	*UserBase
 	Counters     *UserCounters
 	Education    *UserEducation
-	LastSeen     *UserLastSeen
+	LastSeen     *UserLastSeen `json:"last_seen"`
 	Occupation   *UserOccupation
 	Online       *UserOnline
 	Permission   *UserPermission
@@ -14,45 +14,45 @@ type UserFull struct {
 }
 
 type UserBase struct {
-	ID              *int64  `json:"id"`
-	FirstName       *string `json:"first_name"`
-	LastName        *string `json:"last_name"`
-	CanAccessClosed *string `json:"can_access_closed"`
-	IsClosed        *string `json:"is_closed"`
-	Deactivated     *string `json:"deactivated"`
-	Hidden          *bool   `json:"hidden"`
+	ID              int64  `json:"id"`
+	FirstName       string `json:"first_name"`
+	LastName        string `json:"last_name"`
+	CanAccessClosed bool   `json:"can_access_closed"`
+	IsClosed        bool   `json:"is_closed"`
+	Deactivated     string `json:"deactivated"`
+	Hidden          bool   `json:"hidden"`
 }
 
 type UserCounters struct {
-	Albums        *int64 `json:"albums"`
-	Videos        *int64 `json:"videos"`
-	Audios        *int64 `json:"audios"`
-	Notes         *int64 `json:"notes "`
-	Friends       *int64 `json:"friends"`
-	Groups        *int64 `json:"groups"`
-	OnlineFriends *int64 `json:"online_friends"`
-	MutualFriends *int64 `json:"mutual_friends"`
-	UserVideos    *int64 `json:"user_videos"`
-	Followers     *int64 `json:"followers"`
+	Albums        int64 `json:"albums"`
+	Videos        int64 `json:"videos"`
+	Audios        int64 `json:"audios"`
+	Notes         int64 `json:"notes "`
+	Friends       int64 `json:"friends"`
+	Groups        int64 `json:"groups"`
+	OnlineFriends int64 `json:"online_friends"`
+	MutualFriends int64 `json:"mutual_friends"`
+	UserVideos    int64 `json:"user_videos"`
+	Followers     int64 `json:"followers"`
 	// Fields returned only for desktop applications:
-	UserPhotos    *int64 `json:"user_photos"`
-	Subscriptions *int64 `json:"subscriptions"`
+	UserPhotos    int64 `json:"user_photos"`
+	Subscriptions int64 `json:"subscriptions"`
 }
 
 type UserEducation struct {
-	University     *int64  `json:"university"`
-	UniversityName *string `json:"university_name"`
-	Faculty        *int64  `json:"faculty"`
-	FacultyName    *string `json:"faculty_name"`
-	Graduation     *int8   `json:"graduation"`
+	University     int64  `json:"university"`
+	UniversityName string `json:"university_name"`
+	Faculty        int64  `json:"faculty"`
+	FacultyName    string `json:"faculty_name"`
+	Graduation     int8   `json:"graduation"`
 }
 
 type UserFields struct {
-	Sex      *int8   `json:"sex"`
-	Bdate    *string `json:"bdate"`
-	City     *string `json:"city"`
-	Country  *int64  `json:"country"`
-	HomeTown *int64  `json:"home_town"`
+	Sex      int8   `json:"sex"`
+	Bdate    string `json:"bdate"`
+	City     string `json:"city"`
+	Country  int64  `json:"country"`
+	HomeTown int64  `json:"home_town"`
 }
 
 type UserLastSeen struct {

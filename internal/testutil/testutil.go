@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/hnktt/estuaire/internal/projectpath"
+	"github.com/hnktt/go-vk/internal/projectpath"
 	"github.com/joho/godotenv"
 )
 
